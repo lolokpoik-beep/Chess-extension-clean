@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Chess.com Zen Pro",
+  "version": "1.0.0",
+  "description": "A Lichess-inspired dark interface layer for Chess.com with focus mode, clock warnings, opponent history, session tracking, and review shortcuts.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.chess.com/*"],
+  "action": {"default_title":"Chess.com Zen Pro","default_popup":"popup/popup.html"},
+  "options_page": "options/options.html",
+  "content_scripts": [{"matches":["https://www.chess.com/*"],"js":["content/content.js"],"css":["content/zen.css"],"run_at":"document_idle"}]
+}
